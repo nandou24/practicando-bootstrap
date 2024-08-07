@@ -9,10 +9,66 @@
 </head>
 <body>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
     <div class="container py-4">
+        <div>
+            <button class="btn btn-danger"
+                title="Título del popover"
+                data-bs-toggle="popover"
+                data-bs-content="Hola mundo">
+                Haga click para mostrar el Popover
+            </button>
+        </div>
 
+        <div>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error aliquid facilis non nam ea tenetur laudantium neque libero, nostrum dicta dolor temporibus consequatur, iure expedita. Tenetur et quo laborum perspiciatis.
+        </div>
+
+        <div class="mt-4">
+            <button class="btn btn-primary"
+                data-bs-placement="top"    
+                title="Título del popover"
+                data-bs-toggle="popover"
+                data-bs-content="Hola mundo"
+                data-bs-trigger="focus">
+                Popover superior
+            </button>
+
+  
+            <button class="btn btn-primary"
+                data-bs-placement="bottom"    
+                title="Título del popover"
+                data-bs-toggle="popover"
+                data-bs-content="Hola mundo"
+                data-bs-trigger="focus">
+                Popover inferior
+            </button>
+      
+            <button class="btn btn-primary"
+                data-bs-placement="right"    
+                title="Título del popover"
+                data-bs-toggle="popover"
+                data-bs-content="Hola mundo"
+                data-bs-trigger="focus">
+                Popover derecha
+            </button>
         
+            <button class="btn btn-primary"
+                data-bs-placement="left"    
+                title="Título del popover"
+                data-bs-toggle="popover"
+                data-bs-content="Hola mundo"
+                data-bs-trigger="focus">
+                Popover izquierda
+            </button>
+        </div>
 
     </div>
+
+    <script>
+        const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+        const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+    </script>
+    
 </body>
 </html>
